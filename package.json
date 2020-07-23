@@ -1,11 +1,16 @@
 {
   "name": "w-select",
   "version": "0.1.3",
+  "keywords": [
+    "vue",
+    "select",
+    "w-select"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "prepare": "vue-cli-service build --target lib --name wSelect src/components/Select.vue"
+    "lib": "vue-cli-service build --target lib --name wSelect src/components/Select.vue"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -25,10 +30,11 @@
     "stylus-loader": "^3.0.2",
     "vue-template-compiler": "^2.6.11"
   },
-  "main": "dist/w-select.js",
+  "main": "dist/wSelect.js",
   "files": [
-    "dist/w-select.js",
-    "dist/w-select.css",
+    "dist/wSelect.umd.js",
+    "dist/wSelect.umd.min.js",
+    "dist/wSelect.css",
     "dist/demo.html"
   ],
   "repository": {
