@@ -2,15 +2,13 @@
 
 Everything you wish the HTML `<select>` element could do, wrapped up into a lightweight, zero dependency, extensible Vue component.
 
-w-select is a feature rich select/dropdown/typeahead component. It provides a default template that fits most use cases for a filterable select dropdown. The component is designed to be as lightweight as possible, while maintaining high standards for accessibility, developer experience, and customization.
+`w-select` is a feature rich select/dropdown/typeahead component. It provides a default template that fits most use cases for a filterable select dropdown. The component is designed to be as lightweight as possible, while maintaining high standards for accessibility, developer experience, and customization.
 
 - Tagging
 - Filtering / Searching
 - Select Single/Multiple Options
 - Customizable with slots and stylus variables
-- Accessible
-- Zero dependencies
-- ~20kb Total / ~5kb CSS / ~15kb JS
+- ~23kb Total / ~3kb CSS / ~20kb JS
 
 # Documentation
 
@@ -19,13 +17,13 @@ Complete documentation and examples available at https://github.com/weijuer/w-se
 # Install
 
 ```
-yarn add vue-select
+yarn add w-select
 ```
 
 # or use npm
 
 ```
-npm install vue-select
+npm install w-select
 ```
 
 Then, import and register the component:
