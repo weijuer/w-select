@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <form class="demo-form" action>
+    <form class="demo-form hidden" action>
       <fieldset>
         <legend>单选</legend>
         <w-select search :options="options" v-model="selected"></w-select>
@@ -11,22 +11,34 @@
         <w-select search multiple :options="options" v-model="selecteds"></w-select>
       </fieldset>
     </form>
+
+    <simple-table :heroes="gridData" :columns="gridColumns" :filter-key="searchQuery"></simple-table>
   </div>
 </template>
 
 <script>
 import Select from './components/Select.vue'
+import SimpleTable from './components/SimpleTable.vue'
 
 export default {
   name: 'App',
   components: {
-    [Select.name]: Select
+    [Select.name]: Select,
+    SimpleTable
   },
   data() {
     return {
       options: [],
       selected: '',
-      selecteds: []
+      selecteds: [],
+      searchQuery: '',
+      gridColumns: ['name', 'power'],
+      gridData: [
+        { name: 'Chuck Norris', power: Infinity },
+        { name: 'Bruce Lee', power: 9000 },
+        { name: 'Jackie Chan', power: 7000 },
+        { name: 'Jet Li', power: 8000 }
+      ]
     }
   },
   created() {
@@ -52,23 +64,31 @@ export default {
 
 <style lang="stylus">
 html,
-body
+body {
   margin: 0
   padding: 0
+}
 
-#app
-  font-family: Avenir, Helvetica, Arial, sans-serif
+#app {
+  font-family: -apple-system, SF UI Text, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, WenQuanYi Micro Hei, sans-serif, SimHei, SimSun
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   text-align: center
   color: #2c3e50
   margin-top: 60px
+}
 
-.demo-form
+.hidden {
+  display: none
+}
+
+.demo-form {
   margin: 0 auto
   max-width: 960px
 
-  fieldset
+  fieldset {
     margin-bottom: 1em
     border: 1px solid #aaa
+  }
+}
 </style>
