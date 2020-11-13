@@ -297,14 +297,22 @@ export default {
   display: inline-flex
   justify-content: center
   align-items: center
-  font-size: 20px
+  font-size: 22px
   font-style: normal
 
   &.first {
+    position: relative
+
     &::before {
       display: inline-block
-      content: "\27BD"
-      transform: rotate(180deg)
+      content: "\25C4"
+      transform: scale(0.6, 1.2) translateX(8px)
+    }
+
+    &::after {
+      display: inline-block
+      content: "\25C4"
+      transform: scale(0.6, 1.2) translateX(-10px)
     }
   }
 
@@ -325,7 +333,14 @@ export default {
   &.last {
     &::before {
       display: inline-block
-      content: "\27BD"
+      content: "\25BA"
+      transform: scale(0.6, 1.2) translateX(8px)
+    }
+
+    &::after {
+      display: inline-block
+      content: "\25BA"
+      transform: scale(0.6, 1.2) translateX(-10px)
     }
   }
 }
